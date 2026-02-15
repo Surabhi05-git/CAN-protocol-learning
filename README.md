@@ -4,8 +4,8 @@ This repository contains a collection of learning materials created to
 understand **Controller Area Network (CAN)** protocol concepts from an
 automotive embedded systems perspective.
 
-It includes presentation slides (converted to PDF) along with a simple
-C++ program demonstrating CAN signal reading and unpacking so we can use it in a SOA
+It includes presentation slides (converted to PDF) along with a simple C Program to demonstrate can signal packing and unpacking,
+C++ program demonstrating CAN signal reading and unpacking using CANTOOLS so we can use it in a SOA
 ---
 
 ## Topics Covered
@@ -35,12 +35,15 @@ C++ program demonstrating CAN signal reading and unpacking so we can use it in a
   - Reading incoming CAN signal which is in Packed format (speed) and unpack it using auto generated .c and .h files from CANTOOLS
   - Unpacking CAN data bytes to reconstruct original signal values
   - Printing packed CAN bytes and unpacked signal values OR storing unpack data so we can use it in SOA
+ 
+- A C program Demonstrating
+  - packing and unpacking of CAN signals logic using bitwise operator
 
 ---
 
 ## Code Description
 
-The auto generated C program performs the following operations:
+The C program performs the following operations:
 - Defines speed 16-bit signals
 - Packs these signals into CAN data bytes using bitwise operations
 - Stores the packed data in an 8-byte CAN data array
