@@ -5,9 +5,7 @@ understand **Controller Area Network (CAN)** protocol concepts from an
 automotive embedded systems perspective.
 
 It includes presentation slides (converted to PDF) along with a simple
-C program demonstrating CAN signal packing and unpacking using bitwise
-operations.
-
+C++ program demonstrating CAN signal reading and unpacking so we can use it in a SOA
 ---
 
 ## Topics Covered
@@ -33,21 +31,17 @@ operations.
 - Continuous vs Event-Based CAN Listening
 
 ### Code Example
-- A C program demonstrating:
-  - Packing speed and RPM values into CAN data bytes
-  - Use of bit masking and bit shifting
+- A C++ program demonstrating:
+  - Reading incoming CAN signal which is in Packed format (speed) and unpack it using auto generated .c and .h files from CANTOOLS
   - Unpacking CAN data bytes to reconstruct original signal values
-  - Printing packed CAN bytes and unpacked signal values
-
-This code represents a simplified example of how signals are encoded and
-decoded inside automotive ECUs.
+  - Printing packed CAN bytes and unpacked signal values OR storing unpack data so we can use it in SOA
 
 ---
 
 ## Code Description
 
-The C program performs the following operations:
-- Defines speed and RPM as 16-bit signals
+The auto generated C program performs the following operations:
+- Defines speed 16-bit signals
 - Packs these signals into CAN data bytes using bitwise operations
 - Stores the packed data in an 8-byte CAN data array
 - Unpacks the received bytes to reconstruct the original values
@@ -64,6 +58,7 @@ signals over CAN and after receiving CAN frames.
 - Bitwise operations in C
 - Linux CAN concepts
 - ECU-to-ECU communication
+- CANTOOLS
 
 ---
 
